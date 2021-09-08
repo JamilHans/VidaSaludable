@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "231765123663",
+    "project_id": "vidasaludable-349ca",
+    "storage_bucket": "vidasaludable-349ca.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:231765123663:android:3edaae3a2eae07d6e9803a",
+        "android_client_info": {
+          "package_name": "com.example.vidasaludable"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "231765123663-lio4o16v6tk56493dmct1ou6o4p89lu6.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAKyQe2EZWqULWIaz_-pSONtWXi6uuLNlU"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "231765123663-lio4o16v6tk56493dmct1ou6o4p89lu6.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
