@@ -42,32 +42,21 @@
             <RelativeLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:background="@color/purple_500"
+                android:background="@drawable/demo7"
                 android:padding="10dp">
+
                 <TextView
                     android:id="@+id/tv1"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Ejercicios"
-                    android:textSize="30sp"
+                    style="@android:style/Widget.DeviceDefault.Light.TextView"
+                    android:layout_width="236dp"
+                    android:layout_height="63dp"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="40sp"
+                    android:width="200dp"
+                    android:text="EJERCICIOS"
                     android:textColor="#fff"
-                    android:textStyle="bold"
-                    android:layout_marginTop="10dp"
-                    android:layout_marginLeft="10dp"/>
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="dadadadadadadadadad"
-                    android:layout_below="@+id/tv1"
-                    android:layout_marginLeft="10dp"
-                    android:layout_marginTop="3dp"
-                    android:textColor="#fff"/>
-                <ImageView
-                    android:layout_width="150dp"
-                    android:layout_height="100dp"
-                    android:maxHeight="100dp"
-                    android:src="@drawable/ic_baseline_dashboard_customize_24"
-                    android:layout_alignParentRight="true"/>
+                    android:textSize="40sp"
+                    android:textStyle="bold|italic" />
 
             </RelativeLayout>
             <Button
@@ -85,32 +74,21 @@
             <RelativeLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:background="@color/purple_500"
+                android:background="@drawable/pollito"
                 android:padding="10dp">
+
                 <TextView
                     android:id="@+id/tv1_1"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Comida Saludable"
-                    android:textSize="30sp"
+                    style="@android:style/Widget.DeviceDefault.Light.TextView"
+                    android:layout_width="266dp"
+                    android:layout_height="57dp"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="40sp"
+                    android:width="200dp"
+                    android:text="ALIMENTOS"
                     android:textColor="#fff"
-                    android:textStyle="bold"
-                    android:layout_marginTop="10dp"
-                    android:layout_marginLeft="10dp"/>
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="dadadadadadadadadad"
-                    android:layout_below="@+id/tv1_1"
-                    android:layout_marginLeft="10dp"
-                    android:layout_marginTop="3dp"
-                    android:textColor="#fff"/>
-                <ImageView
-                    android:layout_width="150dp"
-                    android:layout_height="100dp"
-                    android:maxHeight="100dp"
-                    android:src="@drawable/ic_baseline_receipt_long_24"
-                    android:layout_alignParentRight="true"/>
+                    android:textSize="45sp"
+                    android:textStyle="bold|italic" />
 
             </RelativeLayout>
             <Button
@@ -128,36 +106,23 @@
             <RelativeLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:background="@color/purple_500"
+                android:background="@drawable/obesidad_abdominal_imc"
                 android:padding="10dp">
                 <TextView
                     android:id="@+id/tv1_2"
+                    style="@android:style/Widget.DeviceDefault.Light.TextView"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Nosotros"
-                    android:textSize="30sp"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="40sp"
+                    android:text="CONTROL"
                     android:textColor="#fff"
-                    android:textStyle="bold"
-                    android:layout_marginTop="10dp"
-                    android:layout_marginLeft="10dp"/>
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="dadadadadadadadadad"
-                    android:layout_below="@+id/tv1_2"
-                    android:layout_marginLeft="10dp"
-                    android:layout_marginTop="3dp"
-                    android:textColor="#fff"/>
-                <ImageView
-                    android:layout_width="150dp"
-                    android:layout_height="100dp"
-                    android:maxHeight="100dp"
-                    android:src="@drawable/ic_baseline_manage_accounts_24"
-                    android:layout_alignParentRight="true"/>
+                    android:textSize="48sp"
+                    android:textStyle="bold|italic"/>
 
             </RelativeLayout>
             <Button
-                android:id="@+id/btnMiPerfil"
+                android:id="@+id/btnControl"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:background="@android:color/transparent"></Button>
@@ -171,32 +136,27 @@
             <RelativeLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:background="@color/purple_500"
+                android:background="#4DB6AC"
                 android:padding="10dp">
                 <TextView
                     android:id="@+id/tv1_3"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Control"
+                    android:text="ACERCA DE NOSOTROS"
                     android:textSize="30sp"
                     android:textColor="#fff"
                     android:textStyle="bold"
+                    android:layout_toEndOf="@+id/minsa"
                     android:layout_marginTop="10dp"
                     android:layout_marginLeft="10dp"/>
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="dadadadadadadadadad"
-                    android:layout_below="@+id/tv1_3"
-                    android:layout_marginLeft="10dp"
-                    android:layout_marginTop="3dp"
-                    android:textColor="#fff"/>
+
                 <ImageView
+                    android:id="@+id/minsa"
                     android:layout_width="150dp"
                     android:layout_height="100dp"
                     android:maxHeight="100dp"
-                    android:src="@drawable/ic_baseline_exit_to_app_24"
-                    android:layout_alignParentRight="true"/>
+                    android:src="@drawable/minsa"
+                    android:layout_alignParentLeft="true"/>
 
             </RelativeLayout>
             <Button
