@@ -34,7 +34,6 @@ public class ControlActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_control);
-        getSupportActionBar().hide();
         viewPager2 = findViewById(R.id.viewpagerimc);
         tabLayout =  findViewById(R.id.tablayoutimc);
         imcFragmentAdapter = new IMCFragmentAdapter(this);

@@ -7,10 +7,32 @@
     android:layout_height="match_parent"
     android:background="@color/white"
     tools:context=".exercise.ExerciseActivity">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/AppBarExercise"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:elevation="4dp"
+        android:stateListAnimator="@null"
+        app:layout_constraintTop_toTopOf="parent"
+        app:liftOnScroll="true">
+
+        <com.google.android.material.appbar.MaterialToolbar
+            android:id="@+id/topAppBarExercise"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="@color/white"
+            app:navigationIcon="@drawable/ic_menu_navigation"
+            app:title="Exercises"
+            app:titleCentered="true" />
+
+    </com.google.android.material.appbar.AppBarLayout>
+
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/recview"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:layout_marginTop="80dp"
         android:background="@color/white"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"

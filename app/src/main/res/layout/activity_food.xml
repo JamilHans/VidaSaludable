@@ -9,21 +9,33 @@
     android:background="@color/white"
     tools:context=".alimentos.fragments.FoodActivity">
 
-    <include
-        android:id="@+id/toolbar"
-        layout="@layout/toolbar"
-        />
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/AppBarFood"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:elevation="0dp">
+
+        <com.google.android.material.appbar.MaterialToolbar
+            android:id="@+id/topAppBar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="@color/white"
+            app:navigationIcon="@drawable/ic_arrow_back"
+            app:title="@string/app_name"
+            app:titleCentered="true" />
+
+    </com.google.android.material.appbar.AppBarLayout>
 
     <com.google.android.material.tabs.TabLayout
         android:id="@+id/tablayout"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:elevation="12dp"
-        app:tabIndicatorColor="@color/white"
-        android:background="#b47cff"
-        app:tabSelectedTextColor="@color/white"
-        android:layout_below="@+id/toolbar"
-        app:tabTextColor="#D6D6D6">
+        app:tabIndicatorColor="@color/black"
+        android:background="@color/white"
+        app:tabSelectedTextColor="@color/black"
+        android:layout_below="@+id/AppBarFood"
+        app:tabTextColor="@color/light_gris">
     </com.google.android.material.tabs.TabLayout>
 
     <androidx.viewpager2.widget.ViewPager2
@@ -31,6 +43,7 @@
         android:background="@color/white"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_below="@id/tablayout"/>
+        android:layout_below="@id/tablayout"
+        android:elevation="4dp"/>
 
 </RelativeLayout>

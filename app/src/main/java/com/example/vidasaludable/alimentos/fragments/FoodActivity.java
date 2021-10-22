@@ -18,7 +18,6 @@ public class FoodActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_food);
-        getSupportActionBar().hide();
         viewPager2 = findViewById(R.id.viewpager);
         tabLayout =  findViewById(R.id.tablayout);
         fragmentsAdapter = new FragmentsAdapter(this);
