@@ -23,6 +23,7 @@
             android:background="@color/white"
             app:navigationIcon="@drawable/ic_arrow_back"
             app:title="@string/app_name"
+            android:elevation="4dp"
             app:titleCentered="true" />
 
     </com.google.android.material.appbar.AppBarLayout>
@@ -35,6 +36,7 @@
         android:background="@color/white"
         app:tabSelectedTextColor="@color/black"
         android:layout_below="@+id/AppBarFood"
+        android:elevation="4dp"
         app:tabTextColor="@color/light_gris">
     </com.google.android.material.tabs.TabLayout>
 
