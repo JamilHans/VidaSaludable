@@ -182,11 +182,11 @@
                     android:background="@android:color/transparent"/>
 
                 <RelativeLayout
+                    android:id="@+id/Roreto"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:background="@drawable/pollito"
-                    android:padding="10dp"
-                    android:id="@+id/Roreto">
+                    android:padding="10dp">
 
                     <Button
                         android:id="@+id/btnTypicalDishes"
@@ -195,19 +195,30 @@
                         android:layout_height="wrap_content"
                         android:layout_alignParentBottom="true"
                         android:text="Platos tipicos"
-                        android:textColor="#C2185B"
-                        android:textStyle="bold" />
+                        android:textColor="@color/white"
+                        android:textStyle="bold"
+                        android:textSize="15sp"/>
+
+                    <View
+                        android:layout_width="2dp"
+                        android:layout_height="38dp"
+                        android:layout_centerInParent="true"
+                        android:layout_alignParentBottom="true"
+                        android:background="#C8BBBB"
+                        android:padding="10dp"/>
+
                     <Button
                         android:id="@+id/btnFood"
                         style="@style/Widget.MaterialComponents.Button.TextButton"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_toRightOf="@+id/btnTypicalDishes"
-                        android:layout_alignParentBottom="true"
-                        android:text="Alimentos"
                         android:layout_alignParentEnd="true"
-                        android:textColor="#56DC38"
-                        android:textStyle="bold|italic" />
+                        android:layout_alignParentBottom="true"
+                        android:layout_toRightOf="@+id/btnTypicalDishes"
+                        android:text="Alimentos"
+                        android:textColor="#C8BBBB"
+                        android:textStyle="bold"
+                        android:textSize="16sp"/>
 
                 </RelativeLayout>
 
@@ -295,47 +306,66 @@
                     </androidx.cardview.widget.CardView>
 
                     <androidx.cardview.widget.CardView
-                        android:layout_marginTop="20dp"
-                        android:layout_width="150dp"
-                        android:layout_height="120dp"
-                        app:cardCornerRadius="8dp"
-                        android:layout_marginStart="40dp">
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="8dp"
+                        app:cardCornerRadius="8dp">
 
                         <Button
-                            android:id="@+id/btnCerrarSesion"
+                            android:id="@+id/btnAboutUs"
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
                             android:background="@android:color/transparent"/>
 
-                        <RelativeLayout
+                        <LinearLayout
                             android:layout_width="match_parent"
-                            android:layout_height="match_parent"
-                            android:background="#4DB6AC"
-                            android:layout_marginEnd="@dimen/cardview_default_radius">
-
-                            <TextView
-                                android:id="@+id/tv1_3"
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:layout_alignParentBottom="true"
-                                android:layout_marginLeft="10dp"
-                                android:layout_marginTop="10dp"
-                                android:text="ACERCA DE NOSOTROS"
-                                android:textColor="#fff"
-                                android:textSize="20sp"
-                                android:textStyle="bold" />
-
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical">
                             <ImageView
-                                android:id="@+id/minsa"
-                                android:layout_width="80dp"
-                                android:layout_height="50dp"
-                                android:layout_alignParentLeft="true"
-                                android:maxHeight="20dp"
-                                android:src="@drawable/minsa" />
+                                android:layout_width="250dp"
+                                android:layout_height="142dp"
+                                android:src="@drawable/minsa"
+                                android:scaleType="centerInside"/>
 
-                        </RelativeLayout>
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="vertical"
+                                android:padding="16dp">
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="Acerca de nosotros"
+                                    android:textAppearance="?attr/textAppearanceHeadline6"/>
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="8dp"
+                                    android:text="El Minsa es una institucion del Peru velar"
+                                    android:textAppearance="?attr/textAppearanceBody2"
+                                    android:textColor="?android:attr/textColorSecondary" />
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:orientation="horizontal"
+                                android:padding="12dp"
+                                android:layout_marginBottom="10dp">
+                                <com.google.android.material.button.MaterialButton
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginEnd="8dp"
+                                    android:textSize="12sp"
+                                    android:text="Detalles"
+                                    style="?attr/borderlessButtonStyle"/>
+                            </LinearLayout>
+
+                        </LinearLayout>
 
                     </androidx.cardview.widget.CardView>
+
+
 
                 </LinearLayout>
             </HorizontalScrollView>
