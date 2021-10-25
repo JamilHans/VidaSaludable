@@ -13,14 +13,21 @@ import android.view.ViewGroup;
 import com.example.vidasaludable.R;
 import com.firebase.ui.database.FirebaseRecyclerAdapter;
 import com.firebase.ui.database.FirebaseRecyclerOptions;
+import com.google.android.material.appbar.MaterialToolbar;
 import com.google.firebase.database.FirebaseDatabase;
 
 public class ExerciseActivity extends AppCompatActivity {
     RecyclerView recview;
+    MaterialToolbar toolbar;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_exercise);
+
+        toolbar = findViewById(R.id.topAppBarExercise);
+        setSupportActionBar(toolbar);
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+
         recview = (RecyclerView)findViewById(R.id.recview);
         recview.setLayoutManager(new LinearLayoutManager(this));
         FirebaseRecyclerOptions<FileModelExercise> options =

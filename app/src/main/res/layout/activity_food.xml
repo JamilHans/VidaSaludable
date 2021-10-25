@@ -13,16 +13,17 @@
     <com.google.android.material.appbar.AppBarLayout
         android:id="@+id/AppBarFood"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:elevation="0dp">
+        android:layout_height="wrap_content">
 
         <com.google.android.material.appbar.MaterialToolbar
-            android:id="@+id/topAppBar"
+            android:id="@+id/topAppBarFood"
             android:layout_width="match_parent"
             android:layout_height="?attr/actionBarSize"
             android:background="@color/white"
             app:navigationIcon="@drawable/ic_arrow_back"
-            app:title="@string/app_name"
+            app:navigationIconTint="@color/black"
+            app:title="Alimentos"
+            app:titleTextColor="@color/black"
             android:elevation="4dp"
             app:titleCentered="true" />
 
@@ -32,13 +33,12 @@
         android:id="@+id/tablayout"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        app:tabIndicatorColor="@color/black"
-        android:background="@color/white"
-        app:tabSelectedTextColor="@color/black"
         android:layout_below="@+id/AppBarFood"
+        android:background="@color/white"
         android:elevation="4dp"
-        app:tabTextColor="@color/light_gris">
-    </com.google.android.material.tabs.TabLayout>
+        app:tabIndicatorColor="@color/black"
+        app:tabSelectedTextColor="@color/black"
+        app:tabTextColor="@color/light_gris"/>
 
     <androidx.viewpager2.widget.ViewPager2
         android:id="@+id/viewpager"
@@ -46,6 +46,6 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_below="@id/tablayout"
-        android:elevation="4dp"/>
+        android:elevation="6dp"/>
 
 </RelativeLayout>

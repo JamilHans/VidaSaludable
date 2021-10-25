@@ -23,149 +23,322 @@
             app:title="@string/app_name"
             app:titleCentered="true"
             android:background="@color/white"
-            app:navigationIcon="@drawable/ic_menu_navigation"
             />
 
     </com.google.android.material.appbar.AppBarLayout>
 
-
-    <LinearLayout
-        android:orientation="vertical"
+    <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:padding="15dp">
-        <androidx.cardview.widget.CardView
+        android:layout_height="wrap_content">
+        <LinearLayout
+            android:orientation="vertical"
             android:layout_width="match_parent"
-            android:layout_height="120dp"
-            android:layout_marginTop="20dp"
-            app:cardCornerRadius="20dp">
-            <RelativeLayout
-                android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="25dp"
+            android:background="#F4F4F4">
+
+            <TextView
+                android:layout_width="wrap_content"
                 android:layout_height="match_parent"
-                android:background="@drawable/demo7"
-                android:padding="10dp">
+                android:layout_marginTop="20dp"
+                android:text="Entrenamiento"
+                android:textStyle="bold"
+                android:textColor="@color/black"
+                android:textSize="23dp" />
 
-                <TextView
-                    android:id="@+id/tv1"
-                    style="@android:style/Widget.DeviceDefault.Light.TextView"
-                    android:layout_width="236dp"
-                    android:layout_height="63dp"
-                    android:layout_centerHorizontal="true"
-                    android:layout_marginTop="40sp"
-                    android:width="200dp"
-                    android:text="EJERCICIOS"
-                    android:textColor="#fff"
-                    android:textSize="40sp"
-                    android:textStyle="bold|italic" />
+            <HorizontalScrollView
+                android:layout_width="wrap_content"
+                android:layout_height="220dp"
+                android:backgroundTint="@color/white"
+                android:scrollbars="none">
 
-            </RelativeLayout>
-            <Button
-                android:id="@+id/btnCrearActividad"
-                android:layout_width="match_parent"
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal">
+
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="250dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginTop="20dp"
+                        app:cardCornerRadius="7dp"
+                        app:cardElevation="0dp">
+
+                        <Button
+                            android:id="@+id/btnCrearActividad"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:background="@android:color/transparent"
+                            android:elevation="2dp" />
+
+                        <ImageView
+                            android:layout_width="110dp"
+                            android:layout_height="match_parent"
+                            android:src="@drawable/aerobicexercisef"
+                            android:scaleType="centerCrop"
+                            android:adjustViewBounds="true"/>
+
+                        <LinearLayout
+                            android:layout_width="140dp"
+                            android:layout_height="match_parent"
+                            android:orientation="vertical"
+                            android:layout_marginLeft="110dp">
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="8dp"
+                                android:text="Aerobic Exercises"
+                                android:textAlignment="center"
+                                android:elegantTextHeight="true"
+                                android:textStyle="bold"
+                                android:textSize="16sp"
+                                android:textColor="@color/black"/>
+                            <TextView
+                                android:layout_width="140dp"
+                                android:layout_height="wrap_content"
+                                android:padding="10dp"
+                                android:text="Aerobic exercise, which speeds up
+                                your heart rate and breathing"
+                                android:textAlignment="center"/>
+
+                        </LinearLayout>
+
+                    </androidx.cardview.widget.CardView>
+
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="250dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginTop="20dp"
+                        app:cardCornerRadius="7dp"
+                        app:cardElevation="0dp"
+                        android:layout_marginLeft="14dp">
+
+                        <Button
+                            android:id="@+id/btnCrearActividad2"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:background="@android:color/transparent"
+                            android:elevation="2dp" />
+
+                        <ImageView
+                            android:layout_width="100dp"
+                            android:layout_height="match_parent"
+                            android:src="@drawable/streghtexercise"
+                            android:scaleType="centerCrop"
+                            android:adjustViewBounds="true"/>
+
+                        <LinearLayout
+                            android:layout_width="150dp"
+                            android:layout_height="match_parent"
+                            android:orientation="vertical"
+                            android:layout_marginLeft="100dp">
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="8dp"
+                                android:text="Strength training"
+                                android:textAlignment="center"
+                                android:elegantTextHeight="true"
+                                android:textStyle="bold"
+                                android:textSize="16sp"
+                                android:textColor="@color/black"/>
+                            <TextView
+                                android:layout_width="150dp"
+                                android:layout_height="wrap_content"
+                                android:padding="10dp"
+                                android:text="As we age, we lose muscle mass.
+                                 Strength training builds it back."
+                                android:textAlignment="center"/>
+
+                        </LinearLayout>
+
+                    </androidx.cardview.widget.CardView>
+
+                </LinearLayout>
+            </HorizontalScrollView>
+
+            <View style="@style/DividerH"
+                android:layout_marginTop="40dp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
                 android:layout_height="match_parent"
-                android:background="@android:color/transparent"></Button>
+                android:layout_marginTop="25dp"
+                android:text="Alimentos"
+                android:textStyle="bold"
+                android:textColor="@color/black"
+                android:textSize="24dp" />
 
-        </androidx.cardview.widget.CardView>
-        <androidx.cardview.widget.CardView
-            android:layout_width="match_parent"
-            android:layout_height="120dp"
-            android:layout_marginTop="20dp"
-            app:cardCornerRadius="20dp">
-            <RelativeLayout
+            <androidx.cardview.widget.CardView
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:background="@drawable/pollito"
-                android:padding="10dp">
+                android:layout_height="150dp"
+                android:layout_marginTop="20dp"
+                app:cardCornerRadius="7dp">
 
-                <TextView
-                    android:id="@+id/tv1_1"
-                    style="@android:style/Widget.DeviceDefault.Light.TextView"
-                    android:layout_width="266dp"
-                    android:layout_height="57dp"
-                    android:layout_centerHorizontal="true"
-                    android:layout_marginTop="40sp"
-                    android:width="200dp"
-                    android:text="ALIMENTOS"
-                    android:textColor="#fff"
-                    android:textSize="45sp"
-                    android:textStyle="bold|italic" />
+                <Button
+                    android:id="@+id/btnVerAlimentos"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@android:color/transparent"/>
 
-            </RelativeLayout>
-            <Button
-                android:id="@+id/btnVerAlimentos"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:background="@android:color/transparent"></Button>
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/pollito"
+                    android:padding="10dp"
+                    android:id="@+id/Roreto">
 
-        </androidx.cardview.widget.CardView>
-        <androidx.cardview.widget.CardView
-            android:layout_width="match_parent"
-            android:layout_height="120dp"
-            android:layout_marginTop="20dp"
-            app:cardCornerRadius="20dp">
-            <RelativeLayout
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:background="@drawable/obesidad_abdominal_imc"
-                android:padding="10dp">
-                <TextView
-                    android:id="@+id/tv1_2"
-                    style="@android:style/Widget.DeviceDefault.Light.TextView"
+                    <Button
+                        android:id="@+id/btnTypicalDishes"
+                        style="@style/Widget.MaterialComponents.Button.TextButton"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentBottom="true"
+                        android:text="Platos tipicos"
+                        android:textColor="#C2185B"
+                        android:textStyle="bold" />
+                    <Button
+                        android:id="@+id/btnFood"
+                        style="@style/Widget.MaterialComponents.Button.TextButton"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_toRightOf="@+id/btnTypicalDishes"
+                        android:layout_alignParentBottom="true"
+                        android:text="Alimentos"
+                        android:layout_alignParentEnd="true"
+                        android:textColor="#56DC38"
+                        android:textStyle="bold|italic" />
+
+                </RelativeLayout>
+
+            </androidx.cardview.widget.CardView>
+
+            <View style="@style/DividerH"
+                android:layout_marginTop="40dp"/>
+
+            <HorizontalScrollView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:scrollbars="none">
+
+                <LinearLayout
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_centerHorizontal="true"
-                    android:layout_marginTop="40sp"
-                    android:text="CONTROL"
-                    android:textColor="#fff"
-                    android:textSize="48sp"
-                    android:textStyle="bold|italic"/>
+                    android:layout_marginTop="30dp"
+                    android:orientation="horizontal">
 
-            </RelativeLayout>
-            <Button
-                android:id="@+id/btnControl"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:background="@android:color/transparent"></Button>
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="8dp"
+                        app:cardCornerRadius="8dp">
 
-        </androidx.cardview.widget.CardView>
-        <androidx.cardview.widget.CardView
-            android:layout_width="match_parent"
-            android:layout_marginTop="20dp"
-            android:layout_height="120dp"
-            app:cardCornerRadius="20dp">
-            <RelativeLayout
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:background="#4DB6AC"
-                android:padding="10dp">
-                <TextView
-                    android:id="@+id/tv1_3"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="ACERCA DE NOSOTROS"
-                    android:textSize="30sp"
-                    android:textColor="#fff"
-                    android:textStyle="bold"
-                    android:layout_toEndOf="@+id/minsa"
-                    android:layout_marginTop="10dp"
-                    android:layout_marginLeft="10dp"/>
+                        <Button
+                            android:id="@+id/btnControl"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:background="@android:color/transparent"/>
 
-                <ImageView
-                    android:id="@+id/minsa"
-                    android:layout_width="150dp"
-                    android:layout_height="100dp"
-                    android:maxHeight="100dp"
-                    android:src="@drawable/minsa"
-                    android:layout_alignParentLeft="true"/>
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical">
+                            <ImageView
+                                android:layout_width="250dp"
+                                android:layout_height="142dp"
+                                android:src="@drawable/controlpeso"
+                                android:scaleType="centerCrop"/>
 
-            </RelativeLayout>
-            <Button
-                android:id="@+id/btnCerrarSesion"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:background="@android:color/transparent"></Button>
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="vertical"
+                                android:padding="16dp">
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Control de peso"
+                                android:textAppearance="?attr/textAppearanceHeadline6"/>
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="8dp"
+                                android:text="Registre su marca pesonal
+                                para ver su progreso"
+                                android:textAppearance="?attr/textAppearanceBody2"
+                                android:textColor="?android:attr/textColorSecondary" />
+                            </LinearLayout>
 
-        </androidx.cardview.widget.CardView>
-    </LinearLayout>
+                            <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:orientation="horizontal"
+                                android:padding="12dp"
+                                android:layout_marginBottom="10dp">
+                                <com.google.android.material.button.MaterialButton
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginEnd="8dp"
+                                    android:textSize="12sp"
+                                    android:text="Calcular" />
 
+                                <com.google.android.material.button.MaterialButton
+                                    style="?attr/borderlessButtonStyle"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:textSize="12sp"
+                                    android:text="detalles" />
+                            </LinearLayout>
+
+                        </LinearLayout>
+
+                    </androidx.cardview.widget.CardView>
+
+                    <androidx.cardview.widget.CardView
+                        android:layout_marginTop="20dp"
+                        android:layout_width="150dp"
+                        android:layout_height="120dp"
+                        app:cardCornerRadius="8dp"
+                        android:layout_marginStart="40dp">
+
+                        <Button
+                            android:id="@+id/btnCerrarSesion"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:background="@android:color/transparent"/>
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:background="#4DB6AC"
+                            android:layout_marginEnd="@dimen/cardview_default_radius">
+
+                            <TextView
+                                android:id="@+id/tv1_3"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentBottom="true"
+                                android:layout_marginLeft="10dp"
+                                android:layout_marginTop="10dp"
+                                android:text="ACERCA DE NOSOTROS"
+                                android:textColor="#fff"
+                                android:textSize="20sp"
+                                android:textStyle="bold" />
+
+                            <ImageView
+                                android:id="@+id/minsa"
+                                android:layout_width="80dp"
+                                android:layout_height="50dp"
+                                android:layout_alignParentLeft="true"
+                                android:maxHeight="20dp"
+                                android:src="@drawable/minsa" />
+
+                        </RelativeLayout>
+
+                    </androidx.cardview.widget.CardView>
+
+                </LinearLayout>
+            </HorizontalScrollView>
+        </LinearLayout>
+    </ScrollView>
 </LinearLayout>

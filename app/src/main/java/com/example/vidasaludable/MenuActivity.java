@@ -14,7 +14,7 @@ import com.example.vidasaludable.exercise.ExerciseActivity;
 public class MenuActivity extends AppCompatActivity {
 
     private Button btnControl;
-    private Button btnCrearActividad;
+    private Button btnCrearActividad, btnCrearActividad2;
     private Button btnVerAlimentos;
 
     @Override
@@ -24,6 +24,7 @@ public class MenuActivity extends AppCompatActivity {
         btnControl = (Button) findViewById(R.id.btnControl);
         btnCrearActividad = (Button) findViewById(R.id.btnCrearActividad);
         btnVerAlimentos = (Button) findViewById(R.id.btnVerAlimentos);
+        btnCrearActividad2 = findViewById(R.id.btnCrearActividad2);
 
 
         btnControl.setOnClickListener(new View.OnClickListener() {
@@ -35,6 +36,14 @@ public class MenuActivity extends AppCompatActivity {
         });
 
         btnCrearActividad.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent myIntent = new Intent(MenuActivity.this, ExerciseActivity.class);
+                startActivity(myIntent);
+            }
+        });
+
+        btnCrearActividad2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent myIntent = new Intent(MenuActivity.this, ExerciseActivity.class);

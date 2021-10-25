@@ -13,6 +13,7 @@ import android.widget.EditText;
 import com.example.vidasaludable.R;
 import com.example.vidasaludable.adapters.FragmentsAdapter;
 import com.example.vidasaludable.adapters.imcAdapter.IMCFragmentAdapter;
+import com.google.android.material.appbar.MaterialToolbar;
 import com.google.android.material.button.MaterialButton;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.google.android.material.tabs.TabLayout;
@@ -27,6 +28,7 @@ public class ControlActivity extends AppCompatActivity {
     IMCFragmentAdapter imcFragmentAdapter;
     TabLayout tabLayout;
     ViewPager2 viewPager2;
+    MaterialToolbar toolbar;
     private String[] titles = new String[]{"IMC", "Record"};
 
 
@@ -34,6 +36,11 @@ public class ControlActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_control);
+
+        toolbar = findViewById(R.id.topAppBarImc);
+        setSupportActionBar(toolbar);
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+
         viewPager2 = findViewById(R.id.viewpagerimc);
         tabLayout =  findViewById(R.id.tablayoutimc);
         imcFragmentAdapter = new IMCFragmentAdapter(this);

@@ -14,15 +14,6 @@
     android:orientation="vertical"
     android:id="@+id/llcImc"
     android:background="@color/white">
-    <TextView
-        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
-        android:layout_width="wrap_content"
-        android:layout_height="100dp"
-        android:layout_gravity="center"
-        android:textAlignment="center"
-        android:text="INDICE DE MASA CORPORAL"
-        android:layout_marginTop="15dp"
-        android:textSize="40dp" />
 
     <androidx.appcompat.widget.LinearLayoutCompat
         android:layout_width="match_parent"
@@ -45,6 +36,8 @@
                 android:id="@+id/textEtPeso"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:backgroundTint="@color/white"
+                android:elevation="4dp"
                 />
 
         </com.google.android.material.textfield.TextInputLayout>
@@ -82,7 +75,8 @@
         android:layout_height="wrap_content"
         android:layout_gravity="center"
         android:text="Calcular"
-        app:backgroundTint="#006064"
+        android:textColor="@color/black"
+        app:backgroundTint="#dcd9f8"
         />
 
     <androidx.appcompat.widget.AppCompatTextView
