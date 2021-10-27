@@ -13,4 +13,9 @@
     <color name="light_blue">#08A8F0</color>
     <color name="light_gris">#d9d9d9</color>
 
+    <color name="colorTextPrimary">#212121</color>
+    <color name="colorTextSecondary">#757575</color>
+    <color name="colorBackground">#FFFFFF</color>
+    <color name="colorOnboardingIndicatorInactive">#72BCF7</color>
+
 </resources>

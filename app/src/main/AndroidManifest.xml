@@ -12,12 +12,16 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.VidaSaludable">
-        <activity android:name=".alimentos.fragments.FoodActivity"
-            android:parentActivityName=".MenuActivity"/>
-        <activity android:name=".exercise.ExerciseActivity"
-            android:parentActivityName=".MenuActivity"/>
-        <activity android:name=".control.ControlActivity"
-            android:parentActivityName=".MenuActivity"/>
+        <activity android:name=".viewpagerwelcome.welcomeOneActivity"></activity>
+        <activity
+            android:name=".alimentos.fragments.FoodActivity"
+            android:parentActivityName=".MenuActivity" />
+        <activity
+            android:name=".exercise.ExerciseActivity"
+            android:parentActivityName=".MenuActivity" />
+        <activity
+            android:name=".control.ControlActivity"
+            android:parentActivityName=".MenuActivity" />
         <activity android:name=".MenuActivity" />
         <activity android:name=".MainActivity">
             <intent-filter>

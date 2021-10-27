@@ -5,6 +5,8 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.content.Intent;
 import android.os.Bundle;
 
+import com.example.vidasaludable.viewpagerwelcome.welcomeOneActivity;
+
 public class MainActivity extends AppCompatActivity {
 
     protected boolean _active = true;
@@ -30,7 +32,7 @@ public class MainActivity extends AppCompatActivity {
 
                 } finally {
 
-                    startActivity(new Intent(MainActivity.this, MenuActivity.class));
+                    startActivity(new Intent(MainActivity.this, welcomeOneActivity.class));
                     finish();
                 }
             }
