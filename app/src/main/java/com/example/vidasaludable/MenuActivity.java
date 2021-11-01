@@ -13,7 +13,7 @@ import com.example.vidasaludable.exercise.ExerciseActivity;
 
 public class MenuActivity extends AppCompatActivity {
 
-    private Button btnControl;
+    private Button btnControl, btnDetailControl, btnCalculateControl;
     private Button btnCrearActividad, btnCrearActividad2;
     private Button btnVerAlimentos;
 
@@ -25,7 +25,23 @@ public class MenuActivity extends AppCompatActivity {
         btnCrearActividad = (Button) findViewById(R.id.btnCrearActividad);
         btnVerAlimentos = (Button) findViewById(R.id.btnVerAlimentos);
         btnCrearActividad2 = findViewById(R.id.btnCrearActividad2);
+        btnDetailControl = findViewById(R.id.btnDetailsControl);
+        btnCalculateControl = findViewById(R.id.btnCalculateControl);
 
+        btnDetailControl.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                openDialog();
+            }
+        });
+
+        btnCalculateControl.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent myIntent = new Intent(MenuActivity.this, ControlActivity.class);
+                startActivity(myIntent);
+            }
+        });
 
         btnControl.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -59,5 +75,10 @@ public class MenuActivity extends AppCompatActivity {
             }
         });
 
+    }
+
+    private void openDialog() {
+        DetailsDialog detailsDialog = new DetailsDialog();
+        detailsDialog.show(getSupportFragmentManager(), "detaDialog");
     }
 }
