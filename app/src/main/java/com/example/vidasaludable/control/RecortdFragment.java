@@ -30,7 +30,6 @@ public class RecortdFragment extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-
         vista = inflater.inflate(R.layout.fragment_recortd, container, false);
         conn = new DatabaseHandler(getContext());
         imcArrayList = new ArrayList<>();
