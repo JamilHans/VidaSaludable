@@ -15,7 +15,7 @@ import com.google.android.material.button.MaterialButton;
 
 public class MenuActivity extends AppCompatActivity {
 
-    private Button btnControl;
+    private Button btnControl, btnDetailControl, btnCalculateControl;
     private Button btnCrearActividad, btnCrearActividad2;
     private Button btnVerAlimentos;
     private Button btnAboutUs;
@@ -29,7 +29,23 @@ public class MenuActivity extends AppCompatActivity {
         btnVerAlimentos = (Button) findViewById(R.id.btnVerAlimentos);
         btnCrearActividad2 = findViewById(R.id.btnCrearActividad2);
         btnAboutUs = (Button) findViewById(R.id.btnAboutUs);
+        btnDetailControl = findViewById(R.id.btnDetailsControl);
+        btnCalculateControl = findViewById(R.id.btnCalculateControl);
 
+        btnDetailControl.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                openDialog();
+            }
+        });
+
+        btnCalculateControl.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent myIntent = new Intent(MenuActivity.this, ControlActivity.class);
+                startActivity(myIntent);
+            }
+        });
 
         btnControl.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -71,5 +87,10 @@ public class MenuActivity extends AppCompatActivity {
             }
         });
 
+    }
+
+    private void openDialog() {
+        DetailsDialog detailsDialog = new DetailsDialog();
+        detailsDialog.show(getSupportFragmentManager(), "detaDialog");
     }
 }

@@ -7,12 +7,43 @@
     tools:context=".alimentos.fragments.AlimentosFragment">
 
     <!-- TODO: Update blank fragment layout -->
-    <com.google.android.material.textview.MaterialTextView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:gravity="center"
-        android:textSize="40sp"
-        android:textColor="@color/black"
-        android:text="Alimentos" />
+    <ScrollView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Bebidas (alcohólicas y analcohólicas)"
+                android:textColor="@color/black"
+                android:gravity="center"
+                android:padding="10dp"/>
 
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:src="@drawable/alimentosbebidas" />
+
+            <View style="@style/DividerH"
+                android:layout_marginTop="40dp"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Leche y derivados"
+                android:textColor="@color/black"
+                android:gravity="center"
+                android:padding="10dp"
+                android:layout_marginTop="20dp"/>
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="350dp"
+                android:scaleType="fitStart"
+                android:src="@drawable/alimentoslecheyderivados" />
+        </LinearLayout>
+    </ScrollView>
 </FrameLayout>
