@@ -13,6 +13,7 @@ public class DatabaseHandler extends SQLiteOpenHelper {
     private static final String KEY_PESO = "peso";
     private static final String KEY_ESTATURA = "estatura";
     private static final String KEY_RESULTIMC = "resultImc";
+    private static final String KEY_CATEGORIA = "categoria";
 
     public DatabaseHandler(Context context) {
         super(context, DATABASE_NAME, null, DATABASE_VERSION);
@@ -24,7 +25,8 @@ public class DatabaseHandler extends SQLiteOpenHelper {
                 + KEY_ID + " INTEGER PRIMARY KEY,"
                 + KEY_PESO + " REAL,"
                 + KEY_ESTATURA + " REAL,"
-                + KEY_RESULTIMC + " REAL" + ")";
+                + KEY_RESULTIMC + " REAL,"
+                + KEY_CATEGORIA + " TEXT" + ")";
         db.execSQL(CREATE_RECORD_TABLE);
     }
 
@@ -40,6 +42,7 @@ public class DatabaseHandler extends SQLiteOpenHelper {
         values.put(KEY_PESO, imc.getPeso());
         values.put(KEY_ESTATURA, imc.getEstatura());
         values.put(KEY_RESULTIMC, imc.getResultImc());
+        values.put(KEY_CATEGORIA,imc.getCategoria());
 
         db.insert(TABLE_RECORD,null,values);
     }

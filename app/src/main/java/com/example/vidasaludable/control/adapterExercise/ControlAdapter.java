@@ -32,6 +32,7 @@ public class ControlAdapter extends RecyclerView.Adapter<ControlAdapter.RecordVi
         holder.tvPeso.setText(String.valueOf(listaImc.get(position).getPeso()));
         holder.tvTalla.setText(String.valueOf(listaImc.get(position).getEstatura()));
         holder.tvIMC.setText(String.valueOf(listaImc.get(position).getResultImc()));
+        holder.tvCategoria.setText(listaImc.get(position).getCategoria());
 
     }
 
@@ -42,13 +43,15 @@ public class ControlAdapter extends RecyclerView.Adapter<ControlAdapter.RecordVi
 
     public class RecordViewHolder extends RecyclerView.ViewHolder {
 
-        TextView tvPeso, tvTalla, tvIMC;
+        TextView tvPeso, tvTalla, tvIMC, tvCategoria;
 
         public RecordViewHolder(@NonNull View itemView) {
             super(itemView);
             tvPeso = (TextView) itemView.findViewById(R.id.tvPeso);
             tvTalla = (TextView) itemView.findViewById(R.id.tvTalla);
             tvIMC = (TextView) itemView.findViewById(R.id.tvIMC);
+            tvCategoria = (TextView) itemView.findViewById(R.id.tvCategoria);
+
         }
     }
 }

@@ -37,6 +37,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:backgroundTint="@color/white"
+                android:inputType="number"
                 android:elevation="4dp"
                 />
 
@@ -64,6 +65,7 @@
                 android:id="@+id/textEtTalla"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:inputType="number"
                 />
 
         </com.google.android.material.textfield.TextInputLayout>
@@ -115,7 +117,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
-        android:src="@drawable/apple"/>
+        android:src="@drawable/tabla_imc"/>
 
 
 </androidx.appcompat.widget.LinearLayoutCompat>

@@ -7,6 +7,7 @@ import android.os.Bundle;
 import androidx.fragment.app.Fragment;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
+import androidx.swiperefreshlayout.widget.SwipeRefreshLayout;
 
 import android.view.LayoutInflater;
 import android.view.View;
@@ -24,6 +25,7 @@ public class RecortdFragment extends Fragment {
 
     ArrayList<Imc>imcArrayList;
     RecyclerView recyclerViewImc;
+    SwipeRefreshLayout swipeRefreshLayout;
     DatabaseHandler conn;
     View vista;
 
@@ -37,7 +39,18 @@ public class RecortdFragment extends Fragment {
         recyclerViewImc.setLayoutManager(new LinearLayoutManager(getContext()));
         consultarListaRecord();
         ControlAdapter adapter= new ControlAdapter(imcArrayList);
+        //adapter.notifyDataSetChanged();
         recyclerViewImc.setAdapter(adapter);
+        swipeRefreshLayout = vista.findViewById(R.id.swiperefreshLayout);
+        swipeRefreshLayout.setOnRefreshListener(new SwipeRefreshLayout.OnRefreshListener() {
+            @Override
+            public void onRefresh() {
+                imcArrayList.clear();
+                consultarListaRecord();
+                adapter.notifyDataSetChanged();
+                swipeRefreshLayout.setRefreshing(false);
+            }
+        });
         return vista;
     }
 
@@ -51,6 +64,7 @@ public class RecortdFragment extends Fragment {
             imc.setPeso(cursor.getFloat(1));
             imc.setEstatura(cursor.getFloat(2));
             imc.setResultImc(cursor.getFloat(3));
+            imc.setCategoria(cursor.getString(4));
             imcArrayList.add(imc);
         }
     }

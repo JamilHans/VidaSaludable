@@ -73,14 +73,14 @@ public class welcomeOneActivity extends AppCompatActivity {
         itemPayOnline.setImage(R.drawable.aerobicexercisef);
 
         OnboardingItem itemOnTheWay = new OnboardingItem();
-        itemOnTheWay.setTitle("Vida Saludable");
-        itemOnTheWay.setDescription("Bienvenido a la mejor aplicacion movil");
-        itemOnTheWay.setImage(R.drawable.aerobicexercisef);
+        itemOnTheWay.setTitle("Recuerda: ");
+        itemOnTheWay.setDescription("Los platos típicos cuentan con información nutricional de 1 porción (620g) otorgado por Nutrition Technologies S.A.C");
+        itemOnTheWay.setImage(R.drawable.typical_meals);
 
         OnboardingItem itemEatTogether = new OnboardingItem();
-        itemEatTogether.setTitle("Vida Saludable");
-        itemEatTogether.setDescription("Bienvenido a la mejor aplicacion movil");
-        itemEatTogether.setImage(R.drawable.aerobicexercisef);
+        itemEatTogether.setTitle("Recuerda: ");
+        itemEatTogether.setDescription("Hacer ejericicios mejora el control del peso corporal");
+        itemEatTogether.setImage(R.drawable.exercise_at_home);
 
         onboardingItems.add(itemPayOnline);
         onboardingItems.add(itemOnTheWay);

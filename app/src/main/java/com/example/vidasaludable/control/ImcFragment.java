@@ -11,6 +11,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.FrameLayout;
+import android.widget.Toast;
 
 import com.example.vidasaludable.R;
 import com.example.vidasaludable.control.bd.DatabaseHandler;
@@ -55,32 +56,43 @@ public class ImcFragment extends Fragment {
                 toTalla = textEtTalla.getText().toString();
                 toPeso = textEtPeso.getText().toString();
 
-                talla = Float.parseFloat(toTalla);
-                peso = Float.parseFloat(toPeso);
-                imc = operation(talla,peso);
-
-                db.addDateIMC(new Imc(peso,talla,imc));
-
-                textViewEstatura.setText("Estatura: "+toTalla + "cms");
-                textViewPeso.setText("Peso: " + toPeso+ "kgs");
-                if (imc<18.5){
-                    textViewResultado.setText("Su IMC es "+ imc+", lo que indica que su \npeso esta en la categoria de delgadez");
-                    setBack.setBackgroundColor(Color.WHITE);
+                if(toTalla.isEmpty() || toPeso.isEmpty()){
+                    Toast.makeText(getContext(), "Formulario Incompleto",Toast.LENGTH_SHORT).show();
                 }
-                else if (18.5 <= imc  && imc <= 24.99){
-                    textViewResultado.setText("Su IMC es "+ imc+", lo que indica que su \npeso esta en la categoria normal");
-                    setBack.setBackgroundColor(Color.YELLOW);
-                }
-                else if (25.0 <= imc  && imc <= 30.0){
-                    textViewResultado.setText("Su IMC es "+ imc+", lo que indica que su \npeso esta en la categoria sobrepeso");
-                    setBack.setBackgroundColor(Color.MAGENTA);
-                }
-                else if (imc > 30){
-                    textViewResultado.setText("Su IMC es "+ imc+", lo que indica que su \npeso esta en la categoria obesidad");
-                    setBack.setBackgroundColor(Color.RED);
-                }
+                else{
+                    String categoria = "";
+                    talla = Float.parseFloat(toTalla);
+                    peso = Float.parseFloat(toPeso);
+                    imc = operation(talla,peso);
 
-
+                    textViewEstatura.setText("Estatura: "+toTalla + "cms");
+                    textViewPeso.setText("Peso: " + toPeso+ "kgs");
+                    if (imc<18.5){
+                        textViewResultado.setText("Su IMC es "+ imc+", lo que indica que su \npeso esta en la categoria de delgadez");
+                        categoria = "delgadez";
+                        db.addDateIMC(new Imc(peso,talla,imc,categoria));
+                        //setBack.setBackgroundColor(Color.WHITE);
+                    }
+                    else if (18.5 <= imc  && imc <= 24.99){
+                        textViewResultado.setText("Su IMC es "+ imc+", lo que indica que su \npeso esta en la categoria normal");
+                        categoria = "normal";
+                        db.addDateIMC(new Imc(peso,talla,imc,categoria));
+                        //setBack.setBackgroundColor(Color.YELLOW);
+                    }
+                    else if (25.0 <= imc  && imc <= 30.0){
+                        textViewResultado.setText("Su IMC es "+ imc+", lo que indica que su \npeso esta en la categoria sobrepeso");
+                        categoria = "sobrepeso";
+                        db.addDateIMC(new Imc(peso,talla,imc,categoria));
+                        //setBack.setBackgroundColor(Color.MAGENTA);
+                    }
+                    else if (imc > 30){
+                        textViewResultado.setText("Su IMC es "+ imc+", lo que indica que su \npeso esta en la categoria obesidad");
+                        categoria = "obesidad";
+                        db.addDateIMC(new Imc(peso,talla,imc,categoria));
+                        //setBack.setBackgroundColor(Color.RED);
+                    }
+                    limpiarCajas();
+                }
 
             }
         });
@@ -99,5 +111,10 @@ public class ImcFragment extends Fragment {
         convtalla = talla/100;
         convtalla = convtalla * convtalla;
         return convtalla;
+    }
+
+    public void limpiarCajas(){
+        textEtPeso.setText("");
+        textEtTalla.setText("");
     }
 }
