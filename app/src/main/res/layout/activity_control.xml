@@ -34,7 +34,7 @@
         android:layout_height="wrap_content"
         android:elevation="4dp"
         app:tabIndicatorColor="@color/white"
-        android:background="#CAC9C8"
+        android:background="#dcd9f8"
         app:tabSelectedTextColor="@color/white"
         android:layout_below="@+id/toolbar"
         app:tabTextColor="#D6D6D6">
