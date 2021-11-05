@@ -86,7 +86,7 @@
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:layout_marginTop="8dp"
-                                android:text="Aerobic Exercises"
+                                android:text="Ejercicios Aeróbicos"
                                 android:textAlignment="center"
                                 android:elegantTextHeight="true"
                                 android:textStyle="bold"
@@ -96,8 +96,8 @@
                                 android:layout_width="140dp"
                                 android:layout_height="wrap_content"
                                 android:padding="10dp"
-                                android:text="Aerobic exercise, which speeds up
-                                your heart rate and breathing"
+                                android:text="Ejercicio aeróbico,
+                                que acelera la frecuencia cardíaca y la respiración. "
                                 android:textAlignment="center"/>
 
                         </LinearLayout>
@@ -135,7 +135,7 @@
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:layout_marginTop="8dp"
-                                android:text="Strength training"
+                                android:text="Entrenamiento de Fuerza"
                                 android:textAlignment="center"
                                 android:elegantTextHeight="true"
                                 android:textStyle="bold"
@@ -145,8 +145,8 @@
                                 android:layout_width="150dp"
                                 android:layout_height="wrap_content"
                                 android:padding="10dp"
-                                android:text="As we age, we lose muscle mass.
-                                 Strength training builds it back."
+                                android:text="A medida que envejecemos, perdemos masa muscular.
+                                El entrenamiento de fuerza lo reconstruye. "
                                 android:textAlignment="center"/>
 
                         </LinearLayout>
@@ -343,7 +343,7 @@
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
                                     android:layout_marginTop="8dp"
-                                    android:text="El Minsa es una institucion del Peru velar"
+                                    android:text="El Minsa es una institucion del Peru"
                                     android:textAppearance="?attr/textAppearanceBody2"
                                     android:textColor="?android:attr/textColorSecondary" />
                             </LinearLayout>

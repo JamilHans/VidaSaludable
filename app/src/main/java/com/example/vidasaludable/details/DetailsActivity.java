@@ -10,17 +10,23 @@ import android.widget.Button;
 import android.widget.ImageView;
 
 import com.example.vidasaludable.R;
+import com.google.android.material.appbar.MaterialToolbar;
 
 import java.lang.reflect.Array;
 
 public class DetailsActivity extends AppCompatActivity {
 
+    MaterialToolbar toolbar;
     private ImageView imageViewPage, imageViewFacebook;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_details);
+
+        toolbar = findViewById(R.id.topAppBarDetails);
+        setSupportActionBar(toolbar);
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
         imageViewPage = (ImageView) findViewById(R.id.imageViewPage);
         imageViewFacebook = (ImageView) findViewById(R.id.imageViewFacebook);

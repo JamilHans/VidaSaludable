@@ -12,7 +12,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.VidaSaludable">
-        <activity android:name=".details.DetailsActivity"></activity>
+        <activity android:name=".details.DetailsActivity"
+            android:parentActivityName=".MenuActivity"/>
         <activity android:name=".viewpagerwelcome.welcomeOneActivity" />
         <activity
             android:name=".alimentos.fragments.FoodActivity"

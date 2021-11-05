@@ -19,6 +19,7 @@ import com.google.firebase.database.FirebaseDatabase;
 public class ExerciseActivity extends AppCompatActivity {
     RecyclerView recview;
     MaterialToolbar toolbar;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);

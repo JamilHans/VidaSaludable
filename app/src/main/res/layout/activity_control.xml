@@ -18,7 +18,7 @@
             android:id="@+id/topAppBarImc"
             android:layout_width="match_parent"
             android:layout_height="?attr/actionBarSize"
-            android:background="#15ab92"
+            android:background="@color/white"
             app:navigationIcon="@drawable/ic_arrow_back"
             app:navigationIconTint="@color/black"
             app:title="Indice de Masa Corporal"
@@ -34,7 +34,7 @@
         android:layout_height="wrap_content"
         android:elevation="4dp"
         app:tabIndicatorColor="@color/white"
-        android:background="#9ddbc9"
+        android:background="#CAC9C8"
         app:tabSelectedTextColor="@color/white"
         android:layout_below="@+id/toolbar"
         app:tabTextColor="#D6D6D6">
